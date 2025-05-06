@@ -19,6 +19,8 @@ extern "C" {
 #include "main.h"
 #include "app_freertos.h"
 
+extern UART_HandleTypeDef huart1;
+
 typedef enum {
     DBG_LVL_NONE = 0,
     DBG_LVL_ERROR,

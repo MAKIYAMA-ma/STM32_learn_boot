@@ -46,7 +46,8 @@ MEMORY
 {
   RAM	(xrw)	: ORIGIN = 0x20040000,	LENGTH = 512K     /* Memory is divided. Actual start is 0x20000000 and actual length is 768K */
   SRAM4	(xrw)	: ORIGIN = 0x28000000,	LENGTH = 16K
-  FLASH	(rx)	: ORIGIN = 0x08100000,	LENGTH = 1024K    /* Memory is divided. Actual start is 0x08000000 and actual length is 2048K */
+  FLASH	(rx)	: ORIGIN = 0x08100000,	LENGTH = 1024K - 8K    /* Memory is divided. Actual start is 0x08000000 and actual length is 2048K */
+  USER_SETTING (rw): ORIGIN = 0x081FE000,	LENGTH = 8K
 }
 
 /* Sections */
@@ -128,6 +129,14 @@ SECTIONS
 
     _edata = .;        /* define a global symbol at data end */
   } >RAM AT> FLASH
+
+  .user_settings :
+  {
+      _user_settings_start = .;
+      KEEP(*(.user_settings))  /* .user_settingsセクションを保持 */
+      . = ALIGN(16);    /* クワッドワード単位 */
+      _user_settings_end = .;
+  } >USER_SETTING
 
   /* Uninitialized data section into "RAM" Ram type memory */
   .bss :
