@@ -1,0 +1,13 @@
+NUCLEO-U575ZIQ-boot-learn/Secure/Debug/*
+NUCLEO-U575ZIQ-boot-learn/Secure/Release/*
+NUCLEO-U575ZIQ-boot-learn/Secure/.settings/*
+NUCLEO-U575ZIQ-boot-learn/Secure/NUCLEO-U575ZIQ-learn Debug.launch
+NUCLEO-U575ZIQ-boot-learn/Secure/tags
+NUCLEO-U575ZIQ-boot-learn/Secure/.clangd
+NUCLEO-U575ZIQ-boot-learn/NonSecure/Debug/*
+NUCLEO-U575ZIQ-boot-learn/NonSecure/Release/*
+NUCLEO-U575ZIQ-boot-learn/NonSecure/.settings/*
+NUCLEO-U575ZIQ-boot-learn/NonSecure/NUCLEO-U575ZIQ-learn Debug.launch
+NUCLEO-U575ZIQ-boot-learn/NonSecure/tags
+NUCLEO-U575ZIQ-boot-learn/NonSecure/.clangd
+documents/*
